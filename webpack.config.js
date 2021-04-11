@@ -48,6 +48,8 @@ const plugins = () => {
         new copyWebpackPlugin({
             patterns: [
                 { from: path.resolve(__dirname, 'src/assets'), to: path.resolve(__dirname, 'app/assets') },
+                { from: path.resolve(__dirname, 'src/img'), to: path.resolve(__dirname, 'app/img') },
+
             ]
         })
     ]
@@ -123,7 +125,7 @@ module.exports = {
                     loader: 'file-loader',
                     options: {
                         name: `./img/${fileName('[ext]')}`
-                    }
+                    },
                 }],
             },
 
@@ -135,12 +137,12 @@ module.exports = {
             {
                 test: /\.ttf$/,
                 use: [{
-                  loader: 'file-loader',
-                  options: {
-                    name: `./fonts/${fileName('[ext]')}`
-                  }
+                    loader: 'file-loader',
+                    options: {
+                        name: `./fonts/${fileName('[ext]')}`
+                    }
                 }],
-              }
+            }
         ],
     },
 
