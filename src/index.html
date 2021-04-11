@@ -3,7 +3,8 @@
 
 <head>
     <link rel="shortcut icon" href="assets/logo-title.png">
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <!-- Primary Meta Tags -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -37,29 +38,73 @@
 
 <body>
     <main>
+        <nav class="main__nav">
+            <div class="nav__logo">
+                <svg class="logo__svg" width="27" height="27" viewBox="0 0 27 27" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M13.5 27C20.9558 27 27 20.9558 27 13.5C27 6.04416 20.9558 0 13.5 0C6.04416 0 0 6.04416 0 13.5C0 20.9558 6.04416 27 13.5 27ZM21 6H6V21H21V6Z"
+                        fill="black" />
+                </svg>
+                <h1 class="logo__name-h1">Blank</h1>
+            </div>
+            <div class="nav__group-links">
+                <a href="javascript:void(0)" class="group-links__link group-links__link_active">Why Blank</a>
+
+                <a href="javascript:void(0)" class="group-links__link">What blank offers</a>
+
+                <a href="javascript:void(0)" class="group-links__link">How it works</a>
+
+                <a href="javascript:void(0)" class="group-links__link">Blank token</a>
+
+                <a href="javascript:void(0)" class="group-links__link">Token Metrics</a>
+            </div>
+        </nav>
+
         <div class="main__description-block">
-            <nav class="main__nav">
-                <div class="nav__logo">
-                    <svg class="logo__svg" width="27" height="27" viewBox="0 0 27 27" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M13.5 27C20.9558 27 27 20.9558 27 13.5C27 6.04416 20.9558 0 13.5 0C6.04416 0 0 6.04416 0 13.5C0 20.9558 6.04416 27 13.5 27ZM21 6H6V21H21V6Z"
-                            fill="black" />
-                    </svg>
-                    <h1 class="logo__name-h1">Blank</h1>
+            <div class="description-block__social">
+                <a href="https://medium.com/" target="_blank" class="social__link">
+                    <i class="fab fa-medium"></i>
+                </a>
+                <a href="https://github.com" target="_blank" class="social__link">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://twitter.com" target="_blank" class="social__link">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://telegram.ru" target="_blank" class="social__link">
+                    <i class="fab fa-telegram-plane"></i>
+                </a>
+                <a href="https://linkedin.com" target="_blank" class="social__link">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+            <div class="title-block">
+                <p class="title__cap">The most private, non-custodial Ethereum wallet</p>
+                <h3 class="title__subtitle">Reclaim privacy on your Ethereum transfers</h3>
+                <p class="title__description">Blank hides your financial data by mixing transfers with the pool of funds
+                    within Blank, ensuring that outward transfers remain anonymous. Your privacy level only goes up with
+                    each additional transfer inside.</p>
+
+                <div class="title-block__actions">
+                    <button class="actions__button actions__button_blue">Request Early Access <i class="fas fa-arrow-down"></i></button>
+                    <button class="actions__button actions__button_white">Whitepaper <i class="fas fa-arrow-down"></i></button>
                 </div>
-                <div class="nav__group-links">
-                    <a href="javascript:void(0)" class="group-links__link group-links__link_active">Why Blank</a>
-
-                    <a href="javascript:void(0)" class="group-links__link">What blank offers</a>
-
-                    <a href="javascript:void(0)" class="group-links__link">How it works</a>
-
-                    <a href="javascript:void(0)" class="group-links__link">Blank token</a>
-
-                    <a href="javascript:void(0)" class="group-links__link">Token Metrics</a>
-                </div>
-            </nav>
+            </div>
+            <div class="description-block__account-preview">
+                <svg class="account-preview__circle-svg" width="643" height="643" viewBox="0 0 643 643" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M321.5 643C499.06 643 643 499.06 643 321.5C643 143.94 499.06 0 321.5 0C143.94 0 0 143.94 0 321.5C0 499.06 143.94 643 321.5 643ZM500.112 142.888H142.888V500.112H500.112V142.888Z" fill="#D9EAFA"/>
+                    <path d="M104.793 302.169H77.3228V329.639H104.793V302.169Z" fill="#E7F1FB"/>
+                    <path d="M525.998 537.19H498.529V564.66H525.998V537.19Z" fill="white"/>
+                    <path d="M553.468 509.72H525.998V537.19H553.468V509.72Z" fill="white"/>
+                    <path d="M525.998 94.6187H498.529V122.089H525.998V94.6187Z" fill="#E7F1FB"/>
+                    <path d="M132.263 329.639H104.793V357.109H132.263V329.639Z" fill="#E7F1FB"/>
+                    <path d="M132.263 478.18H76.3054V505.65H132.263V478.18Z" fill="#E7F1FB"/>
+                    <path d="M643 449.693H551.434V507.685H643V449.693Z" fill="#E7F1FB"/>
+                    <path d="M104.793 242.142H0V302.169H104.793V242.142Z" fill="#E7F1FB"/>
+                </svg>
+                <img src="img/account.png" class="account-preview__img" alt="фотография аккаунта в приложении">
+            </div>
         </div>
     </main>
 </body>

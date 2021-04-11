@@ -4,7 +4,7 @@
 }
 
 @font-face {
-  font-family: "Roboto";
+  font-family: "Roboto-Bold";
   src: url(.././fonts/Roboto-Black.ttf);
 }
 @font-face {
@@ -15,13 +15,155 @@
   font-family: "Roboto-normal";
   src: url(.././fonts/Roboto-Regular.ttf);
 }
+::selection {
+  background: #8f9caa;
+  color: white;
+}
+
 body {
   width: 100vw;
   height: max-content;
   display: flex;
   flex-direction: column;
-  font-family: "Roboto";
-  font-size: 5em;
+  font-family: "Roboto-Normal";
+}
+body main .main__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 15px;
+  background: #E7F1FB;
+}
+body main .main__nav .nav__logo {
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
+  cursor: pointer;
+  transition: 0.5s all;
+  padding: 10px;
+  align-items: center;
+  border-radius: 10px;
+  user-select: none;
+  transition: 0.4s all;
+}
+body main .main__nav .nav__logo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.1);
+}
+body main .main__nav .nav__group-links {
+  width: 740px;
+  display: flex;
+  justify-content: space-between;
+}
+body main .main__nav .nav__group-links .group-links__link {
+  text-decoration: none;
+  color: #455A74;
+  text-transform: uppercase;
+  width: 161px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 12px;
+  margin: 0 10px;
+}
+body main .main__nav .nav__group-links .group-links__link_active {
+  background: rgba(10, 18, 30, 0.7);
+  border-radius: 4px;
+  color: white;
+}
+body main .main__description-block {
+  display: flex;
+  padding: 20px;
+  box-sizing: border-box;
+  background: #E7F1FB;
+}
+body main .main__description-block .description-block__social {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 110px;
+}
+body main .main__description-block .description-block__social .social__link {
+  color: black;
+  font-size: 1.4em;
+  margin: 10px 0;
+}
+body main .main__description-block .title-block {
+  width: 586px;
+  margin: 40px 0 0 85px;
+  color: #0A121E;
+  font-family: "Roboto-light";
+}
+body main .main__description-block .title-block .title__cap {
+  text-transform: uppercase;
+  margin-left: 15px;
+  margin-bottom: 15px;
+}
+body main .main__description-block .title-block .title__subtitle {
+  font-size: 72px;
+  line-height: 76px;
+}
+body main .main__description-block .title-block .title__description {
+  margin-top: 35px;
+  width: 535px;
+  line-height: 32px;
+}
+body main .main__description-block .title-block .title-block__actions {
+  margin-top: 15px;
+  display: flex;
+}
+body main .main__description-block .title-block .title-block__actions .actions__button {
+  box-sizing: border-box;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 15px;
+  margin: 0 20px 0 0;
+  outline: none;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Roboto-Light";
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  transition: 0.4s all;
+}
+body main .main__description-block .title-block .title-block__actions .actions__button:hover {
+  transform: scale(1.05);
+}
+body main .main__description-block .title-block .title-block__actions .actions__button .fa-arrow-down {
+  transform: rotate(-45deg);
+  font-size: 16px;
+}
+body main .main__description-block .title-block .title-block__actions .actions__button_blue {
+  background: #1673FF;
+  border: 2px solid #1673FF;
+  color: white;
+  width: 295px;
+  height: 58px;
+}
+body main .main__description-block .title-block .title-block__actions .actions__button_white {
+  border: 2px solid rgba(10, 18, 30, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  background: transparent;
+  width: 233px;
+  height: 58px;
+}
+body main .main__description-block .description-block__account-preview {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #000;
+  width: 643px;
+  height: 643px;
+  margin-left: 350px;
+}
+body main .main__description-block .description-block__account-preview .account-preview__img {
+  width: 405px;
+  height: 643px;
 }
 
 /*# sourceMappingURL=main.css.map*/
