@@ -3,7 +3,7 @@
     padding: 0;
 }
 @font-face {
-    font-family: 'Roboto';
+    font-family: 'Roboto-Bold';
     src: url('../fonts/Roboto-Black.ttf');
 }
 @font-face {
@@ -20,6 +20,65 @@ body {
     height: max-content;
     display: flex;
     flex-direction: column;
-    font-family: 'Roboto';
-    font-size: 5em;
+    font-family: 'Roboto-Normal';
+
+    main {
+        .main__description-block {
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            box-sizing: border-box;
+            background: #E7F1FB;
+
+            .main__nav {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 5px 15px;
+
+                .nav__logo {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100px;
+                    cursor: pointer;
+                    transition: 0.5s all;
+                    padding: 10px;
+                    align-items: center;
+                    border-radius: 10px;
+                    user-select: none;
+                    transition: 0.4s all;
+
+
+                    &:hover {
+                        transform: scale(1.05);
+                        box-shadow: 0 1px 5px 0 rgb(0 0 0 / 10%);
+                    }
+                }
+                .nav__group-links {
+                    width: 740px;
+                    display: flex;
+                    justify-content: space-between;
+
+                    .group-links__link {
+                        text-decoration: none;
+                        color: black;
+                        text-transform: uppercase;
+                        width: 161px;
+                        height: 40px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        text-align: center;
+                        font-size: 12px;
+                        margin: 0 10px;
+                    }
+                    .group-links__link_active {
+                        background: rgba(10, 18, 30, 0.7);
+                        border-radius: 4px;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
 }
