@@ -18,8 +18,8 @@
     background: #8f9caa;
     color: white;
 }
+
 body {
-    width: 100vw;
     height: max-content;
     display: flex;
     flex-direction: column;
@@ -44,7 +44,6 @@ body {
                 border-radius: 10px;
                 user-select: none;
                 transition: 0.4s all;
-
 
                 &:hover {
                     transform: scale(1.05);
@@ -169,7 +168,6 @@ body {
                 display: flex;
                 align-items: center;
                 flex-direction: column;
-                border: 1px solid #000;
                 width: 643px;
                 height: 643px;
                 margin-left: 350px;
@@ -181,12 +179,53 @@ body {
 
                 .account-preview__img {
                     width: 405px;
-                    height: 643px;
+                    cursor: pointer;
                     position: absolute;
                     z-index: 1;
                     top: 100px;
+                    transition: 0.4s all;
+                    border-radius: 10px;
+
+                    &:hover {
+                        transform: scale(1.05);
+                        box-shadow: 0 1px 5px 0 rgb(0 0 0 / 10%);
+                    }
                 }
             }
         }
+
+        .main__block-about-anonymity {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .title-block {
+                width: 586px;
+                margin: 40px 0 0 85px;
+                color: #0A121E;
+                font-family: 'Roboto-light';
+
+                .title__cap {
+                    text-transform: uppercase;
+                    margin-left: 15px;
+                    margin-bottom: 15px;
+                }
+
+                .title__subtitle {
+                    font-size: 72px;
+                    line-height: 76px;
+                }
+
+                .title__description {
+                    margin-top: 35px;
+                    width: 535px;
+                    line-height: 32px;
+                }
+            }
+
+            .main__svg-statistics {
+                margin-right: 150px;
+            }
+        }   
     }
 }
