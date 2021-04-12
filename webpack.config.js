@@ -13,7 +13,7 @@ let fileName = (ext) => {
 const { cleanWebpackPlugin } = require('clean-webpack-plugin')
 const miniCssExtractTextPlugin = require('mini-css-extract-plugin')
 let devServer = require('webpack-dev-server')
-
+const copyWebpackPligin = require('copy-webpack-plugin')
 const OptimazeCssAssetWebpackPlugin = require('optimize-css-assets-webpack-plugin')
 const TerserWebpackPlugin = require('terser-webpack-plugin')
 const ImageminPlugin = require('imagemin-webpack')
@@ -129,7 +129,7 @@ module.exports = {
                 use: ['babel-loader'],
             },
             {
-                test: /\.ttf$/,
+                test: /\.(?:|ttf|otf|)$/,
                 use: [{
                     loader: 'file-loader',
                     options: {
