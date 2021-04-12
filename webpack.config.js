@@ -1,4 +1,4 @@
-//npm install webpack cross-env path clean-webpack-plugin mini-css-extract-plugin html-webpack-plugin webpack-dev-server copy-webpack-plugin file-loader css-loader sass-loader sass webpack optimize-css-assets-webpack-plugin imagemin-webpack  --save-dev
+//npm install webpack cross-env path clean-webpack-plugin mini-css-extract-plugin html-webpack-plugin webpack-dev-server  file-loader css-loader sass-loader sass webpack optimize-css-assets-webpack-plugin imagemin-webpack  --save-dev
 //npm install -D webpack-cli
 //npm install -D babel-loader @babel/core @babel/preset-env webpack
 
@@ -13,7 +13,7 @@ let fileName = (ext) => {
 const { cleanWebpackPlugin } = require('clean-webpack-plugin')
 const miniCssExtractTextPlugin = require('mini-css-extract-plugin')
 let devServer = require('webpack-dev-server')
-const copyWebpackPlugin = require('copy-webpack-plugin')
+
 const OptimazeCssAssetWebpackPlugin = require('optimize-css-assets-webpack-plugin')
 const TerserWebpackPlugin = require('terser-webpack-plugin')
 const ImageminPlugin = require('imagemin-webpack')
@@ -45,13 +45,7 @@ const plugins = () => {
         new miniCssExtractTextPlugin({
             filename: `./css/${fileName('css')}`, // можно переименвать файл
         }),
-        new copyWebpackPlugin({
-            patterns: [
-                { from: path.resolve(__dirname, 'src/assets'), to: path.resolve(__dirname, 'app/assets') },
-                { from: path.resolve(__dirname, 'src/img'), to: path.resolve(__dirname, 'app/img') },
-
-            ]
-        })
+        
     ]
     if (isProd) {
         basePlugins.push(
