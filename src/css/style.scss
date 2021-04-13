@@ -36,6 +36,74 @@ body {
     font-family: 'Roboto-Normal';
 
     main {
+        .title-block {
+            width: 600px;
+            margin: 40px 0 0 85px;
+            color: #0A121E;
+            font-family: 'Roboto-light';
+
+
+            .title__cap {
+                text-transform: uppercase;
+                margin: 10px;
+            }
+
+            .title__subtitle {
+                font-size: 72px;
+                line-height: 76px;
+            }
+
+            .title__text {
+                margin-top: 25px;
+                margin-bottom: -10px;
+                width: 535px;
+                line-height: 32px;
+            }
+            .title-block__actions {
+                margin-top: 25px;
+                display: flex;
+                .actions__button {
+                    box-sizing: border-box;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    padding: 15px;
+                    margin: 0 20px 0 0;
+                    outline: none;
+                    font-size: 12px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-family: 'Roboto-Light';
+                    letter-spacing: 0.6px;
+                    text-transform: uppercase;
+                    transition: 0.4s all;
+                    &:hover {
+                        transform: scale(1.05);
+                    }
+                    .fa-arrow-down {
+                        transform: rotate(-45deg);
+                        font-size: 16px;
+                    }
+                }
+
+                .actions__button_blue {
+                    background: #1673FF;
+                    border: 2px solid #1673FF;
+                    color: white;
+                    width: 295px;
+                    height: 58px;
+                }
+
+                .actions__button_white {
+                    border: 2px solid rgba(10, 18, 30, 0.2);
+                    box-sizing: border-box;
+                    border-radius: 4px;
+                    background: transparent;
+                    width: 233px;
+                    height: 58px;
+                }
+            }
+        }
         .main__nav {
             display: flex;
             align-items: center;
@@ -85,7 +153,6 @@ body {
                 }
             }
         }
-
         .main__description-block {
             display: flex;
             padding: 20px;
@@ -105,74 +172,6 @@ body {
                 }
             }
 
-            .title-block {
-                width: 586px;
-                margin: 40px 0 0 85px;
-                color: #0A121E;
-                font-family: 'Roboto-light';
-
-
-                .title__cap {
-                    text-transform: uppercase;
-                    margin-left: 15px;
-                    margin-bottom: 15px;
-                }
-
-                .title__subtitle {
-                    font-size: 72px;
-                    line-height: 76px;
-                }
-
-                .title__text {
-                    margin-top: 35px;
-                    width: 535px;
-                    line-height: 32px;
-                }
-                .title-block__actions {
-                    margin-top: 15px;
-                    display: flex;
-                    .actions__button {
-                        box-sizing: border-box;
-                        border-radius: 4px;
-                        cursor: pointer;
-                        padding: 15px;
-                        margin: 0 20px 0 0;
-                        outline: none;
-                        font-size: 12px;
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-                        font-family: 'Roboto-Light';
-                        letter-spacing: 0.6px;
-                        text-transform: uppercase;
-                        transition: 0.4s all;
-                        &:hover {
-                            transform: scale(1.05);
-                        }
-                        .fa-arrow-down {
-                            transform: rotate(-45deg);
-                            font-size: 16px;
-                        }
-                    }
-
-                    .actions__button_blue {
-                        background: #1673FF;
-                        border: 2px solid #1673FF;
-                        color: white;
-                        width: 295px;
-                        height: 58px;
-                    }
-
-                    .actions__button_white {
-                        border: 2px solid rgba(10, 18, 30, 0.2);
-                        box-sizing: border-box;
-                        border-radius: 4px;
-                        background: transparent;
-                        width: 233px;
-                        height: 58px;
-                    }
-                }
-            }
 
             .main__account-preview {
                 display: flex;
@@ -203,41 +202,15 @@ body {
                 }
             }
         }
-
         .main__block-about-anonymity {
             display: flex;
             justify-content: space-between;
             align-items: center;
 
-            .title-block {
-                width: 586px;
-                margin: 40px 0 0 85px;
-                color: #0A121E;
-                font-family: 'Roboto-light';
-
-                .title__cap {
-                    text-transform: uppercase;
-                    margin-left: 15px;
-                    margin-bottom: 15px;
-                }
-
-                .title__subtitle {
-                    font-size: 72px;
-                    line-height: 76px;
-                }
-
-                .title__text {
-                    margin-top: 35px;
-                    width: 535px;
-                    line-height: 32px;
-                }
-            }
-
             .main__svg-statistics {
                 margin-right: 150px;
             }
         }
-
         .main__what-blank-does {
             margin-top: 100px;
             display: flex;
@@ -296,6 +269,13 @@ body {
                     }
                 }
             }
+        }
+        .main__what-extension-gives {
+            margin-top: 70px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 225px;
         }
     }
 }
