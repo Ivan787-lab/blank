@@ -1,1 +1,271 @@
-*{margin:0;padding:0}@font-face{font-family:Roboto-Bold;src:url(../fonts/Roboto-Black.ttf)}@font-face{font-family:Roboto-light;src:url(../fonts/Roboto-Light.ttf)}@font-face{font-family:Roboto-normal;src:url(../fonts/Roboto-Regular.ttf)}::selection{background:#8f9caa;color:#fff}body{height:max-content;display:flex;flex-direction:column;font-family:Roboto-Normal}body main .title-block{width:600px;margin:40px 0 0 85px;color:#0a121e;font-family:Roboto-light}body main .title-block .title__cap{text-transform:uppercase;margin:10px}body main .title-block .title__subtitle{font-size:72px;line-height:76px}body main .title-block .title__text{margin-top:25px;margin-bottom:-10px;width:535px;line-height:32px}body main .title-block .title-block__actions{margin-top:25px;display:flex}body main .title-block .title-block__actions .actions__button{box-sizing:border-box;border-radius:4px;cursor:pointer;padding:15px;margin:0 20px 0 0;outline:none;font-size:12px;display:flex;justify-content:space-between;align-items:center;font-family:Roboto-Light;letter-spacing:.6px;text-transform:uppercase;transition:all .4s}body main .title-block .title-block__actions .actions__button:hover{transform:scale(1.05)}body main .title-block .title-block__actions .actions__button .fa-arrow-down{transform:rotate(-45deg);font-size:16px}body main .title-block .title-block__actions .actions__button_blue{background:#1673ff;border:2px solid #1673ff;color:#fff;width:295px;height:58px}body main .title-block .title-block__actions .actions__button_white{border:2px solid rgba(10,18,30,.2);box-sizing:border-box;border-radius:4px;background:transparent;width:233px;height:58px}body main .main__nav{padding:5px 15px;background:#e7f1fb}body main .main__nav,body main .main__nav .nav__logo{display:flex;align-items:center;justify-content:space-between}body main .main__nav .nav__logo{width:100px;cursor:pointer;transition:all .5s;padding:10px;border-radius:10px;user-select:none;transition:all .4s}body main .main__nav .nav__logo:hover{transform:scale(1.05);box-shadow:0 1px 5px 0 rgba(0,0,0,.1)}body main .main__nav .nav__group-links{width:740px;display:flex;justify-content:space-between}body main .main__nav .nav__group-links .nav__link{text-decoration:none;color:#455a74;text-transform:uppercase;width:161px;height:40px;display:flex;align-items:center;justify-content:center;text-align:center;font-size:12px;margin:0 10px}body main .main__nav .nav__group-links .nav__link_active{background:rgba(10,18,30,.7);border-radius:4px;color:#fff}body main .main__description-block{display:flex;padding:20px;box-sizing:border-box;background:#e7f1fb}body main .main__description-block .main__social{position:absolute;display:flex;flex-direction:column;align-items:center;top:110px}body main .main__description-block .main__social .social__link{color:#000;font-size:1.4em;margin:10px 0}body main .main__description-block .main__account-preview{display:flex;align-items:center;flex-direction:column;width:643px;height:643px;margin-left:350px}body main .main__description-block .main__account-preview .main__circle-svg{position:relative;z-index:0}body main .main__description-block .main__account-preview .main__img{width:405px;cursor:pointer;position:absolute;z-index:1;top:100px;transition:all .4s;border-radius:10px}body main .main__description-block .main__account-preview .main__img:hover{transform:scale(1.05);box-shadow:0 1px 5px 0 rgba(0,0,0,.1)}body main .main__block-about-anonymity{display:flex;justify-content:space-between;align-items:center}body main .main__block-about-anonymity .main__svg-statistics{margin-right:150px}body main .main__what-blank-does{margin-top:100px;display:flex;flex-direction:column;align-items:center;text-align:center}body main .main__what-blank-does .main__title{font-size:12px;text-align:center;letter-spacing:1.2px;text-transform:uppercase;color:#0a121e;font-family:Roboto-Light}body main .main__what-blank-does .main__subtitle{font-size:55px;color:#0a121e;margin-top:15px}body main .main__what-blank-does .main__recommendations{display:flex;justify-content:space-between;width:1350px;margin-top:50px}body main .main__what-blank-does .main__recommendations .main__recommendation{background:#e7f1fb;width:392px;height:440px;margin:0 10px;border-radius:10px;cursor:pointer;transition:all .4s;padding:30px;box-sizing:border-box;text-align:center}body main .main__what-blank-does .main__recommendations .main__recommendation:hover{transform:scale(1.05)}body main .main__what-blank-does .main__recommendations .main__recommendation .recommendation__svg{margin-top:30px}body main .main__what-blank-does .main__recommendations .main__recommendation .recommendation__title{font-family:Roboto-Light;margin:30px 0}body main .main__what-blank-does .main__recommendations .main__recommendation .recommendation__text{line-height:28px;color:#455a74}body main .main__what-extension-gives{margin-top:70px;display:flex;justify-content:space-between;align-items:center;padding:10px 225px}
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* transition: 0.4s all;
+border-radius: 10px;
+
+&:hover {
+    transform: scale(1.05);
+    box-shadow: 0 1px 5px 0 rgb(0 0 0 / 10%);
+} */
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url(.././fonts/Roboto-Black.ttf);
+}
+@font-face {
+  font-family: "Roboto-light";
+  src: url(.././fonts/Roboto-Light.ttf);
+}
+@font-face {
+  font-family: "Roboto-normal";
+  src: url(.././fonts/Roboto-Regular.ttf);
+}
+::selection {
+  background: #8f9caa;
+  color: white;
+}
+
+body {
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto-Normal";
+}
+body main .title-block {
+  width: 600px;
+  margin: 40px 0 0 85px;
+  color: #0A121E;
+  font-family: "Roboto-light";
+}
+body main .title-block .title__cap {
+  text-transform: uppercase;
+  margin: 10px;
+}
+body main .title-block .title__subtitle {
+  font-size: 72px;
+  line-height: 76px;
+}
+body main .title-block .title__text {
+  margin-top: 25px;
+  margin-bottom: -10px;
+  width: 535px;
+  line-height: 32px;
+}
+body main .title-block .title-block__actions {
+  margin-top: 25px;
+  display: flex;
+}
+body main .title-block .title-block__actions .actions__button {
+  box-sizing: border-box;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 15px;
+  margin: 0 20px 0 0;
+  outline: none;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Roboto-Light";
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  transition: 0.4s all;
+}
+body main .title-block .title-block__actions .actions__button:hover {
+  transform: scale(1.05);
+}
+body main .title-block .title-block__actions .actions__button .fa-arrow-down {
+  transform: rotate(-45deg);
+  font-size: 16px;
+}
+body main .title-block .title-block__actions .actions__button_blue {
+  background: #1673FF;
+  border: 2px solid #1673FF;
+  color: white;
+  width: 295px;
+  height: 58px;
+}
+body main .title-block .title-block__actions .actions__button_white {
+  border: 2px solid rgba(10, 18, 30, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  background: transparent;
+  width: 233px;
+  height: 58px;
+}
+body main .title-block .title-block__ul {
+  margin: 30px 0 0 0;
+}
+body main .title-block .title-block__ul > li {
+  margin: 15px;
+  margin-left: 0;
+  list-style: none;
+}
+body main .title-block .title-block__ul > li::before {
+  content: "✔";
+  margin-right: 10px;
+  width: 5px;
+  height: 5px;
+  color: #1673FF;
+}
+body main .main__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 15px;
+  background: #E7F1FB;
+}
+body main .main__nav .nav__logo {
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
+  cursor: pointer;
+  transition: 0.5s all;
+  padding: 10px;
+  align-items: center;
+  border-radius: 10px;
+  user-select: none;
+  transition: 0.4s all;
+}
+body main .main__nav .nav__logo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.1);
+}
+body main .main__nav .nav__group-links {
+  width: 740px;
+  display: flex;
+  justify-content: space-between;
+}
+body main .main__nav .nav__group-links .nav__link {
+  text-decoration: none;
+  color: #455A74;
+  text-transform: uppercase;
+  width: 161px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 12px;
+  margin: 0 10px;
+}
+body main .main__nav .nav__group-links .nav__link_active {
+  background: rgba(10, 18, 30, 0.7);
+  border-radius: 4px;
+  color: white;
+}
+body main .main__description-block {
+  display: flex;
+  padding: 20px;
+  box-sizing: border-box;
+  background: #E7F1FB;
+}
+body main .main__description-block .main__social {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 110px;
+}
+body main .main__description-block .main__social .social__link {
+  color: black;
+  font-size: 1.4em;
+  margin: 10px 0;
+}
+body main .main__description-block .main__account-preview {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 643px;
+  height: 643px;
+  margin-left: 350px;
+}
+body main .main__description-block .main__account-preview .main__circle-svg {
+  position: relative;
+  z-index: 0;
+}
+body main .main__description-block .main__account-preview .main__img {
+  width: 405px;
+  cursor: pointer;
+  position: absolute;
+  z-index: 1;
+  top: 100px;
+  transition: 0.4s all;
+  border-radius: 10px;
+}
+body main .main__description-block .main__account-preview .main__img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.1);
+}
+body main .main__block-about-anonymity {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body main .main__block-about-anonymity .main__svg-statistics {
+  margin-right: 150px;
+}
+body main .main__what-blank-does {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+body main .main__what-blank-does .main__title {
+  font-size: 12px;
+  text-align: center;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: #0A121E;
+  font-family: "Roboto-Light";
+}
+body main .main__what-blank-does .main__subtitle {
+  font-size: 55px;
+  color: #0A121E;
+  margin-top: 15px;
+}
+body main .main__what-blank-does .main__recommendations {
+  display: flex;
+  justify-content: space-between;
+  width: 1350px;
+  margin-top: 50px;
+}
+body main .main__what-blank-does .main__recommendations .main__recommendation {
+  background: #E7F1FB;
+  width: 392px;
+  height: 440px;
+  margin: 0 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.4s all;
+  padding: 30px;
+  box-sizing: border-box;
+  text-align: center;
+}
+body main .main__what-blank-does .main__recommendations .main__recommendation:hover {
+  transform: scale(1.05);
+}
+body main .main__what-blank-does .main__recommendations .main__recommendation .recommendation__svg {
+  margin-top: 30px;
+}
+body main .main__what-blank-does .main__recommendations .main__recommendation .recommendation__title {
+  font-family: "Roboto-Light";
+  margin: 30px 0;
+}
+body main .main__what-blank-does .main__recommendations .main__recommendation .recommendation__text {
+  line-height: 28px;
+  color: #455A74;
+}
+body main .main__what-extension-gives {
+  margin-top: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 225px;
+}
+
+/*# sourceMappingURL=main.css.map*/
