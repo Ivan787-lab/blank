@@ -45,7 +45,11 @@ const plugins = () => {
         new miniCssExtractTextPlugin({
             filename: `./css/${fileName('css')}`, // можно переименвать файл
         }),
-        
+        new copyWebpackPligin({
+            patterns: [
+                {from: path.resolve(__dirname, 'src/img') , to: path.resolve(__dirname, 'app/img')}
+              ]
+        })
     ]
     if (isProd) {
         basePlugins.push(
