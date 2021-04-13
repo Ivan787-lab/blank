@@ -295,24 +295,29 @@ body {
             padding: 10px 225px;
         }
         .main__privacy-by-design {
+            margin: 50px 0;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
-            padding: 10px 125px;
 
             .privacy-by-design__img {
+                margin: 0 100px;
                 width: 307px;
                 height: 509px;
                 cursor: pointer;
                 transition: 0.4s all;
                 border-radius: 10px;
+                box-shadow: 0 1px 5px 0 rgb(0 0 0 / 10%);
 
                 &:hover {
                     transform: scale(1.05);
-                    box-shadow: 0 1px 5px 0 rgb(0 0 0 / 10%);
                 }
 
             }
+        }
+        .main__block-about-secure {
+            @extend .main__privacy-by-design;
+            flex-direction: row-reverse;
         }
     }
 }
