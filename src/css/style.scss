@@ -21,8 +21,12 @@ border-radius: 10px;
     src: url('../fonts/Roboto-Light.ttf');
 }
 @font-face {
-    font-family: 'Roboto-normal';
+    font-family: 'Roboto-Normal';
     src: url('../fonts/Roboto-Regular.ttf');
+}
+@font-face {
+    font-family: 'Inter-Normal';
+    src: url('../fonts/Inter-VariableFont_slnt\,wght.ttf');
 }
 ::selection {
     background: #8f9caa;
@@ -40,7 +44,8 @@ body {
             width: 600px;
             margin: 40px 0 0 85px;
             color: #0A121E;
-            font-family: 'Roboto-light';
+            font-family: 'Inter-Normal';
+            font-weight: 400;
 
 
             .title__cap {
@@ -59,6 +64,7 @@ body {
                 width: 535px;
                 line-height: 32px;
             }
+
             .title-block__actions {
                 margin-top: 25px;
                 display: flex;
@@ -110,6 +116,7 @@ body {
                 & > li {
                     margin: 15px 15px 15px 0;
                     list-style: none;
+                    font-family: 'Inter-Normal';
 
                     &::before {
                         content: "✔";
@@ -188,7 +195,6 @@ body {
                     margin: 10px 0;
                 }
             }
-
 
             .main__account-preview {
                 display: flex;
@@ -318,6 +324,89 @@ body {
         .main__block-about-secure {
             @extend .main__privacy-by-design;
             flex-direction: row-reverse;
+        }
+        .main__banner {
+            background: black;
+            height: 627px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .banner__title {
+                font-size: 12px;
+                letter-spacing: 1.2px;
+                text-transform: uppercase;
+                color: white;
+                font-family: 'Roboto-Normal';
+            }
+            .banner__subtitle {
+                font-size: 57px;
+                line-height: 68px;
+                color: white;
+                width: 911px;
+                margin-top: 10px;
+            }
+            .banner__text {
+                font-size: 12px;
+                line-height: 32px;
+                color: #90A3BF;
+                font-family: 'Inter-Normal';
+                margin-top: 30px;
+            }
+            .banner__phrase {
+                font-size: 18px;
+                color: #90A3BF;
+                margin-left: 350px;
+            }
+            .banner__actions {
+                display: flex;
+                margin-top: 40px;
+                .actions__button {
+                    box-sizing: border-box;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    padding: 15px;
+                    margin: 0 20px 0 0;
+                    outline: none;
+                    font-size: 12px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-family: 'Roboto-Light';
+                    letter-spacing: 0.6px;
+                    text-transform: uppercase;
+                    transition: 0.4s all;
+
+                    &:hover {
+                        transform: scale(1.05);
+                    }
+                    .fa-arrow-down {
+                        transform: rotate(-45deg);
+                        font-size: 16px;
+                    }
+
+                }
+                .actions__button_blue {
+                    background: #1673FF;
+                    border: 2px solid #1673FF;
+                    color: white;
+                    width: 295px;
+                    height: 58px;
+                }
+                .actions__button_white {
+                    border: 2px solid rgba(255, 255, 255, 0.2);
+                    box-sizing: border-box;
+                    border-radius: 4px;
+                    box-sizing: border-box;
+                    border-radius: 4px;
+                    background: transparent;
+                    width: 233px;
+                    height: 58px;
+                    color: white;
+                }
+
+            }
         }
     }
 }
