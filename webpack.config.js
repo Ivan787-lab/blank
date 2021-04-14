@@ -1,4 +1,4 @@
-//npm install webpack cross-env path clean-webpack-plugin mini-css-extract-plugin html-webpack-plugin webpack-dev-server  file-loader css-loader sass-loader sass webpack optimize-css-assets-webpack-plugin imagemin-webpack  --save-dev
+//npm install webpack cross-env path clean-webpack-plugin mini-css-extract-plugin html-webpack-plugin webpack-dev-server  file-loader css-loader sass-loader sass webpack optimize-css-assets-webpack-plugin  --save-dev
 //npm install -D webpack-cli
 //npm install -D babel-loader @babel/core @babel/preset-env webpack
 
@@ -16,7 +16,6 @@ let devServer = require('webpack-dev-server')
 const copyWebpackPligin = require('copy-webpack-plugin')
 const OptimazeCssAssetWebpackPlugin = require('optimize-css-assets-webpack-plugin')
 const TerserWebpackPlugin = require('terser-webpack-plugin')
-const ImageminPlugin = require('imagemin-webpack')
 const optimization = () => {
     const configObj = {
         splitChunks: {
@@ -47,35 +46,13 @@ const plugins = () => {
         }),
         new copyWebpackPligin({
             patterns: [
-                {from: path.resolve(__dirname, 'src/img') , to: path.resolve(__dirname, 'app/img')}
-              ]
-        })
+                { from: path.resolve(__dirname, 'src/img'), to: path.resolve(__dirname, 'app/img') }
+            ]
+        }),
+       
     ]
-    if (isProd) {
-        basePlugins.push(
-            new ImageminPlugin({
-                bail: false,
-                cache: true,
-                imageminOptions: {
-                    plugins: [
-                        ["gifsicle", { interlaced: true }],
-                        ["jpegtran", { progressive: true }],
-                        ["optipng", { optimizationLevel: 5 }],
-                        [
-                            "svgo",
-                            {
-                                plugins: [
-                                    {
-                                        removeViewBox: false
-                                    }
-                                ]
-                            }
-                        ]
-                    ]
-                }
-            })
-        )
-    }
+   
+    
     return basePlugins
 };
 
@@ -117,15 +94,7 @@ module.exports = {
                     'sass-loader'
                 ]
             },
-            {
-                test: /\.(?:|gif|png|jpg|jpeg|svg)$/,
-                use: [{
-                    loader: 'file-loader',
-                    options: {
-                        name: `./img/${fileName('[ext]')}`
-                    },
-                }],
-            },
+
 
             {
                 test: /\.js/,
@@ -133,17 +102,16 @@ module.exports = {
                 use: ['babel-loader'],
             },
             {
-                test: /\.(?:|ttf|otf|)$/,
+                test: /\.(?:|ttf|otf|)?$/,
                 use: [{
                     loader: 'file-loader',
                     options: {
-                        name: `./fonts/${fileName('[ext]')}`
+                        name: `./fonts/${fileName('[ext]')}`,
                     }
                 }],
             }
         ],
     },
-
 }
 
 
