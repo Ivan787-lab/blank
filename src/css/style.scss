@@ -527,5 +527,50 @@ body {
 
             }
         }
+        .main__market {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            padding: 50px;
+            box-sizing: border-box;
+
+            .market__our-advantages {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                height: 456px;
+                width: 683px;
+                align-items: center;
+                margin-top: 30px;
+                margin-left: 70px;
+
+                .market__advantage {
+                    min-height: 85px;
+                    max-height: max-content;
+                    width: 195px;
+                    margin: 15px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: center;
+                    cursor: pointer;
+                    padding: 5px;
+                    box-sizing: border-box;
+                    transition: 0.4s all;
+                    border-radius: 10px;
+
+                    &:hover {
+                        transform: scale(1.05);
+                        box-shadow: 0 1px 5px 0 rgb(0 0 0 / 10%);
+                    }
+
+
+                    .advenatge__text {
+                        margin-top: 10px;
+                    }
+                }
+
+            }
+        }
     }
 }
