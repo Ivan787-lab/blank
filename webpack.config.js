@@ -1,21 +1,19 @@
-//npm install webpack cross-env path clean-webpack-plugin mini-css-extract-plugin html-webpack-plugin webpack-dev-server  file-loader css-loader sass-loader sass webpack optimize-css-assets-webpack-plugin  --save-dev
-//npm install -D webpack-cli
-//npm install -D babel-loader @babel/core @babel/preset-env webpack
 
 const path = require('path')
-/* npm install cross env --save-dev  позволяет определять переменную NODE_ENV*/
+
 let isDev = process.env.NODE_ENV === 'development'
 let isProd = !isDev
 const HTMLWebpackPlugin = require('html-webpack-plugin')
 let fileName = (ext) => {
     return `[name].${ext}`
 }
-const { cleanWebpackPlugin } = require('clean-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const miniCssExtractTextPlugin = require('mini-css-extract-plugin')
 let devServer = require('webpack-dev-server')
 const copyWebpackPligin = require('copy-webpack-plugin')
 const OptimazeCssAssetWebpackPlugin = require('optimize-css-assets-webpack-plugin')
 const TerserWebpackPlugin = require('terser-webpack-plugin')
+
 const optimization = () => {
     const configObj = {
         splitChunks: {
@@ -41,18 +39,21 @@ const plugins = () => {
             },
             path: path.resolve(__dirname, 'app')
         }),
+        new CleanWebpackPlugin(),
+
         new miniCssExtractTextPlugin({
             filename: `./css/${fileName('css')}`, // можно переименвать файл
         }),
         new copyWebpackPligin({
             patterns: [
-                { from: path.resolve(__dirname, 'src/img'), to: path.resolve(__dirname, 'app/img') }
+                { from: path.resolve(__dirname, 'src/assets/'), to: path.resolve(__dirname, 'app/assets') },
+                { from: path.resolve(__dirname, 'src/robots.txt'), to: path.resolve(__dirname, 'app') },
+                { from: path.resolve(__dirname, 'src/img/'), to: path.resolve(__dirname, 'app/img') },
+                //{ from: path.resolve(__dirname, 'src/manifest.json'), to: path.resolve(__dirname, 'app/manifest.json') }
             ]
         }),
-       
     ]
-   
-    
+
     return basePlugins
 };
 
@@ -65,10 +66,12 @@ module.exports = {
         path: path.resolve(__dirname, 'app'),
     },
     devServer: {
+        historyApiFallback: true,
         contentBase: path.resolve(__dirname, 'app'),
-        compress: true,
-        port: 5555,
         open: true,
+        compress: true,
+        hot: true,
+        port: 3000,
     },
     optimization: optimization(),
     plugins: plugins(),
@@ -95,7 +98,15 @@ module.exports = {
                 ]
             },
 
-
+            {
+                test: /\.(?:|gif|png|jpg|jpeg|svg)$/,
+                use: [{
+                    loader: 'file-loader',
+                    options: {
+                        name: `./img/${fileName('[ext]')}`
+                    }
+                }],
+            },
             {
                 test: /\.js/,
                 exclude: /node_modules/,
