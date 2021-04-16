@@ -450,5 +450,82 @@ body {
                 }
             }
         }
+        .main__table-about-us {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .table-about-us__title {
+                font-size: 12px;
+                line-height: 24px;
+                letter-spacing: 1.2px;
+                text-transform: uppercase;
+                color: #0A121E;
+            }
+            .table-about-us__subtitle {
+                font-size: 58px;
+                line-height: 68px;
+                text-align: center;
+                color: #0A121E;
+                width: 840px;
+                margin: 20px 0 30px 0;
+            }
+            table {
+                border-collapse: collapse;
+                width: max-content;
+                tr {
+                    display: flex;
+                    th {
+                        font-size: 1.5em;
+                        font-family: 'Roboto-light';
+                        width: 275px;
+                        height: 134px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding-left: 15px;
+                        box-sizing: border-box;
+
+                        &:nth-child(3) {
+                            background: #E7F1FB;
+                        }
+
+                        &:nth-child(4) {
+                            background: #E7F1FB;
+                        }
+                    }
+                    td {
+                        border: 1px solid rgba(191, 204, 224, 0.5);
+                        font-size: 1.5em;
+                        font-family: 'Roboto-Normal';
+                        width: 275px;
+                        height: 79px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-start;
+                        padding-left: 15px;
+                        box-sizing: border-box;
+
+                        &:nth-child(3) {
+                            background: #E7F1FB;
+                        }
+
+                        &:nth-child(4) {
+                            background: #E7F1FB;
+                        }
+                    }
+                    .table__td_long {
+                        width: 490px;
+                        background: #E7F1FB;
+                        color: black;
+                    }
+                    .table__td_center {
+                        justify-content: center;
+
+                    }
+                }
+
+            }
+        }
     }
 }
