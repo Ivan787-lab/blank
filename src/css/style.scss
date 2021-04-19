@@ -468,7 +468,7 @@ body {
                 text-align: center;
                 color: #0A121E;
                 width: 840px;
-                margin: 20px 0 30px 0;
+                margin: 20px 0 30px;
             }
             table {
                 border-collapse: collapse;
@@ -571,6 +571,120 @@ body {
                 }
 
             }
+        }
+        .main__roadmap {
+            display: flex;
+            flex-direction: column;
+            .roadmap__block {
+                display: flex;
+                width: 1248px;
+                min-height: 331px;
+                margin: 120px auto 150px;
+
+                .roadmap__one-year {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    padding: 10px;
+                    box-sizing: border-box;
+                    width: 312px;
+
+                    .one-year__achievements {
+                        background: #E7F1FB;
+                        width: 288px;
+                        height: max-content;
+                        padding: 15px;
+                        box-sizing: border-box;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        margin: 4px 4px 0;
+
+                        .achivements__text {
+                            margin: 7px;
+                            width: 222px;
+                        }
+                    }
+                }
+
+                #two-blocks {
+                    padding-top: 36px;
+                }
+                #without-text {
+                    margin-bottom: 16px;
+                }
+                #a-lot-of-text {
+                    padding-top: 32px;
+                }
+            }
+        }
+        .main__our-team {
+            background: #EAEEF2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 125px 125px 55px;
+            box-sizing: border-box;
+
+            .our-team__title {
+                font-family: 'Roboto-light';
+                text-transform: uppercase;
+                letter-spacing: 1.2px;
+                font-size: 12px;
+            }
+
+            .our-team__subtitle {
+                font-size: 58px;
+                line-height: 68px;
+                text-align: center;
+                color: #0A121E;
+                width: 757px;
+                margin-top: 20px;
+            }
+
+
+            .our-team__members {
+                margin-top: 50px;
+                width: 1246px;
+                height: 945px;
+            }
+        }
+        .main__our-partners {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 75px;
+            box-sizing: border-box;
+
+            .our-partners__title {
+                font-size: 12px;
+                line-height: 24px;
+                letter-spacing: 1.2px;
+                text-transform: uppercase;
+                color: #455A74;
+                font-family: 'Roboto-Light';
+
+                .our-partners__images {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 10px;
+                    box-sizing: border-box;
+                }
+            }
+        }
+        .main__banner_bg-blue {
+            @extend .main__banner;
+            background: #1673FF;
+
+            .banner__actions {
+                .actions__button_blue {
+                    background: rgba(10, 18, 30, 0.7);
+                }
+            }
+            
         }
     }
 }
