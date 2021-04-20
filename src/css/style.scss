@@ -684,7 +684,50 @@ body {
                     background: rgba(10, 18, 30, 0.7);
                 }
             }
-            
+
+        }
+        footer {
+            width: 100%;
+            height: 625px;
+            background: black;
+            display: flex;
+            justify-content: space-between;
+            color: white;
+            padding: 75px;
+            box-sizing: border-box;
+
+            .footer__title {
+                .title__p {
+                    width: 416px;
+                    margin: 150px 0 0;
+                }
+            }
+
+            .footer__links {
+                display: flex;
+
+                .links__column {
+                    display: flex;
+                    flex-direction: column;
+                    margin: 0 50px;
+
+                    .column__title {
+                        font-size: 12px;
+                        line-height: 24px;
+                        letter-spacing: 1.2px;
+                        text-transform: uppercase;
+                        color: #74849B;
+                        margin-bottom: 30px;
+                    }
+
+                    .column__link  {
+                        margin: 5px;
+                        color: white;
+                        font-family: 'Inter-Normal';
+                        text-decoration: none;
+                    }
+                }
+            }
         }
     }
 }
